@@ -1,0 +1,42 @@
+.library ieee;
+use ieee.std_logic_1164.all;
+use ieee.std_logic_unsigned.all;
+
+entity ram is
+	port(	F8,F7,F6,F5,F4,F3,F2,F1: in std_logic_vector(3 downto 0);
+	izq,der,disparo, clock1, clock2, enable, reset: in std_logic;
+	q: out std_logic_vector(4 downto 0));
+end ram;
+architecture sol of ram is
+signal nivel8, nivel7, nivel6, nivel5, nivel4, nivel3, nivel2, nivel1: std_logic_vector(7 downto 0);
+signal topeizq, topeder: std_logic;
+begin
+	PROCESS(clock1,reset)
+		BEGIN
+			if reset='0' then
+				nivel8<="000111";
+				nivel7<="000111";
+				nivel6<="000101";
+				nivel5<="000000";
+				nivel4<="000000";
+				nivel3<="000000";
+				nivel2<="000000";
+				nivel1<="001000";
+				topeizq, topeder<='0';
+			elsif (clock1'event and clock1='1') then
+				if (enable>'1') then 
+					topeizq<= nivel8(7) or nivel7(7) or nivel6(7) or nivel5(7) or nivel4(7) or nivel3(7) or nivel2(7);
+					topeder<= nivel8(7) or nivel7(7) or nivel6(7) or nivel5(7) or nivel4(7) or nivel3(7) or nivel2(7);
+				   if (topeizq = '0') then--mover hacia la izquierda siempre y cuando no llegue al limite
+						F8<= nivel8(6) & nivel8(5) & nivel8(4) & nivel8(3) & nivel8(2) & nivel8(1) & '0';
+						F7<= nivel7(6) & nivel7(5) & nivel7(4) & nivel7(3) & nivel7(2) & nivel7(1) & '0';
+						F6<= nivel6(6) & nivel6(5) & nivel6(4) & nivel6(3) & nivel6(2) & nivel6(1) & '0';
+						F5<= nivel5(6) & nivel5(5) & nivel5(4) & nivel5(3) & nivel5(2) & nivel5(1) & '0';
+						F4<= nivel4(6) & nivel4(5) & nivel4(4) & nivel4(3) & nivel4(2) & nivel4(1) & '0';
+						F3<= nivel3(6) & nivel3(5) & nivel3(4) & nivel3(3) & nivel3(2) & nivel3(1) & '0';
+						F2<= nivel2(6) & nivel2(5) & nivel2(4) & nivel2(3) & nivel2(2) & nivel2(1) & '0';
+						topeder<='0';
+					if ()
+						
+						
+				  

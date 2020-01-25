@@ -1,0 +1,16 @@
+Descripción del Proyecto:
+
+Mediante el uso de una FPGA y una matriz de 8x8 se desea el simular el juego de invasores del espacio, 
+el cual consiste de un bloque de puntos que se desplazan a través de la matriz LED de puntos,
+ una vez que llegue a los bordes laterales de la matriz, los puntos se desplazan un punto hacia abajo. En la ultima fila se encuentra el jugador, el cual se puede desplazar de izquierda a derecha y mediante un botón le es posible disparar a las naves.
+
+Alcance del Proyecto:
+
+Se presenta en una matriz de 8x8, un bloque de puntos (2 filas x 3 columnas), el cual se desplazará en la matriz.
+El usuario tendrá habilitado las siguientes botoneras para interactuar:
+Desplazamiento Derecha
+Desplazamiento Izquierda
+Disparar
+Reset
+Start
+El jugador podrá dispararle al bloque de puntos, en caso que exista coincidencia con uno de estos, ese punto desaparece (se apaga). Una vez que el jugador logre destruir todos los puntos, logra pasar al siguiente nivel, en el cual aparece un nuevo bloque de puntos, pero con un desplazamiento más rápido. El juego consta de 4 niveles y se acaba una vez que el bloque de puntos que simulan las naves llegue hasta la fila delante de la fila del jugador.

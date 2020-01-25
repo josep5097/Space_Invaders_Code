@@ -1,0 +1,713 @@
+------------------------------------------------------------
+Timing Analyzer Summary
+------------------------------------------------------------
+
+Type  : Slow 1200mV 85C Model Setup 'demora:inst9|salida'
+Slack : -3.751
+TNS   : -186.369
+
+Type  : Slow 1200mV 85C Model Setup 'CLOCK_DIV_50:inst3|CLOCK_10Hz'
+Slack : -2.992
+TNS   : -40.941
+
+Type  : Slow 1200mV 85C Model Setup 'CLOCK_DIV_50:inst3|CLOCK_100KHz'
+Slack : -2.036
+TNS   : -33.831
+
+Type  : Slow 1200mV 85C Model Setup 'demora:inst1|salida'
+Slack : -1.910
+TNS   : -22.216
+
+Type  : Slow 1200mV 85C Model Setup 'CLOCK_DIV_50:inst3|CLOCK_1MHz'
+Slack : -1.818
+TNS   : -12.382
+
+Type  : Slow 1200mV 85C Model Setup 'CLOCK_DIV_50:inst3|clock_100Khz_int'
+Slack : -1.207
+TNS   : -1.273
+
+Type  : Slow 1200mV 85C Model Setup 'CLOCK_DIV_50:inst3|clock_1Mhz_int'
+Slack : -1.122
+TNS   : -1.187
+
+Type  : Slow 1200mV 85C Model Setup 'CLOCK_DIV_50:inst3|clock_1Khz_int'
+Slack : -1.091
+TNS   : -1.174
+
+Type  : Slow 1200mV 85C Model Setup 'CLOCK_DIV_50:inst3|clock_100hz_int'
+Slack : -1.084
+TNS   : -1.397
+
+Type  : Slow 1200mV 85C Model Setup 'CLOCK_DIV_50:inst3|clock_10Khz_int'
+Slack : -1.053
+TNS   : -1.264
+
+Type  : Slow 1200mV 85C Model Setup 'reloj50'
+Slack : -0.963
+TNS   : -8.932
+
+Type  : Slow 1200mV 85C Model Setup 'CLOCK_DIV_50:inst3|clock_10hz_int'
+Slack : -0.505
+TNS   : -0.605
+
+Type  : Slow 1200mV 85C Model Setup 'CLOCK_DIV_50:inst3|CLOCK_100Hz'
+Slack : -0.193
+TNS   : -0.514
+
+Type  : Slow 1200mV 85C Model Setup 'nave:inst17|gano'
+Slack : -0.127
+TNS   : -0.358
+
+Type  : Slow 1200mV 85C Model Setup 'CLOCK_DIV_50:inst3|CLOCK_1Hz'
+Slack : -0.085
+TNS   : -0.143
+
+Type  : Slow 1200mV 85C Model Hold 'CLOCK_DIV_50:inst3|CLOCK_10Hz'
+Slack : 0.356
+TNS   : 0.000
+
+Type  : Slow 1200mV 85C Model Hold 'CLOCK_DIV_50:inst3|CLOCK_1Hz'
+Slack : 0.357
+TNS   : 0.000
+
+Type  : Slow 1200mV 85C Model Hold 'CLOCK_DIV_50:inst3|clock_100Khz_int'
+Slack : 0.357
+TNS   : 0.000
+
+Type  : Slow 1200mV 85C Model Hold 'CLOCK_DIV_50:inst3|clock_10Khz_int'
+Slack : 0.357
+TNS   : 0.000
+
+Type  : Slow 1200mV 85C Model Hold 'CLOCK_DIV_50:inst3|clock_1Khz_int'
+Slack : 0.357
+TNS   : 0.000
+
+Type  : Slow 1200mV 85C Model Hold 'demora:inst9|salida'
+Slack : 0.357
+TNS   : 0.000
+
+Type  : Slow 1200mV 85C Model Hold 'nave:inst17|gano'
+Slack : 0.357
+TNS   : 0.000
+
+Type  : Slow 1200mV 85C Model Hold 'CLOCK_DIV_50:inst3|CLOCK_100KHz'
+Slack : 0.358
+TNS   : 0.000
+
+Type  : Slow 1200mV 85C Model Hold 'CLOCK_DIV_50:inst3|CLOCK_1MHz'
+Slack : 0.358
+TNS   : 0.000
+
+Type  : Slow 1200mV 85C Model Hold 'CLOCK_DIV_50:inst3|clock_100hz_int'
+Slack : 0.358
+TNS   : 0.000
+
+Type  : Slow 1200mV 85C Model Hold 'CLOCK_DIV_50:inst3|clock_10hz_int'
+Slack : 0.358
+TNS   : 0.000
+
+Type  : Slow 1200mV 85C Model Hold 'CLOCK_DIV_50:inst3|clock_1Mhz_int'
+Slack : 0.358
+TNS   : 0.000
+
+Type  : Slow 1200mV 85C Model Hold 'demora:inst1|salida'
+Slack : 0.359
+TNS   : 0.000
+
+Type  : Slow 1200mV 85C Model Hold 'CLOCK_DIV_50:inst3|CLOCK_100Hz'
+Slack : 0.379
+TNS   : 0.000
+
+Type  : Slow 1200mV 85C Model Hold 'reloj50'
+Slack : 0.386
+TNS   : 0.000
+
+Type  : Slow 1200mV 85C Model Recovery 'demora:inst9|salida'
+Slack : -0.929
+TNS   : -45.678
+
+Type  : Slow 1200mV 85C Model Recovery 'CLOCK_DIV_50:inst3|CLOCK_1MHz'
+Slack : -0.771
+TNS   : -9.240
+
+Type  : Slow 1200mV 85C Model Recovery 'CLOCK_DIV_50:inst3|CLOCK_1Hz'
+Slack : -0.651
+TNS   : -3.255
+
+Type  : Slow 1200mV 85C Model Recovery 'demora:inst1|salida'
+Slack : -0.475
+TNS   : -7.424
+
+Type  : Slow 1200mV 85C Model Recovery 'CLOCK_DIV_50:inst3|CLOCK_10Hz'
+Slack : -0.418
+TNS   : -3.451
+
+Type  : Slow 1200mV 85C Model Recovery 'CLOCK_DIV_50:inst3|CLOCK_100KHz'
+Slack : -0.329
+TNS   : -1.824
+
+Type  : Slow 1200mV 85C Model Recovery 'nave:inst17|gano'
+Slack : 0.048
+TNS   : 0.000
+
+Type  : Slow 1200mV 85C Model Removal 'CLOCK_DIV_50:inst3|CLOCK_100KHz'
+Slack : 0.382
+TNS   : 0.000
+
+Type  : Slow 1200mV 85C Model Removal 'nave:inst17|gano'
+Slack : 0.386
+TNS   : 0.000
+
+Type  : Slow 1200mV 85C Model Removal 'CLOCK_DIV_50:inst3|CLOCK_10Hz'
+Slack : 0.483
+TNS   : 0.000
+
+Type  : Slow 1200mV 85C Model Removal 'demora:inst9|salida'
+Slack : 0.679
+TNS   : 0.000
+
+Type  : Slow 1200mV 85C Model Removal 'demora:inst1|salida'
+Slack : 0.709
+TNS   : 0.000
+
+Type  : Slow 1200mV 85C Model Removal 'CLOCK_DIV_50:inst3|CLOCK_1MHz'
+Slack : 1.016
+TNS   : 0.000
+
+Type  : Slow 1200mV 85C Model Removal 'CLOCK_DIV_50:inst3|CLOCK_1Hz'
+Slack : 1.113
+TNS   : 0.000
+
+Type  : Slow 1200mV 85C Model Minimum Pulse Width 'reloj50'
+Slack : -3.000
+TNS   : -15.000
+
+Type  : Slow 1200mV 85C Model Minimum Pulse Width 'demora:inst9|salida'
+Slack : -1.000
+TNS   : -62.000
+
+Type  : Slow 1200mV 85C Model Minimum Pulse Width 'CLOCK_DIV_50:inst3|CLOCK_100KHz'
+Slack : -1.000
+TNS   : -33.000
+
+Type  : Slow 1200mV 85C Model Minimum Pulse Width 'CLOCK_DIV_50:inst3|CLOCK_100Hz'
+Slack : -1.000
+TNS   : -25.000
+
+Type  : Slow 1200mV 85C Model Minimum Pulse Width 'demora:inst1|salida'
+Slack : -1.000
+TNS   : -16.000
+
+Type  : Slow 1200mV 85C Model Minimum Pulse Width 'CLOCK_DIV_50:inst3|CLOCK_10Hz'
+Slack : -1.000
+TNS   : -14.000
+
+Type  : Slow 1200mV 85C Model Minimum Pulse Width 'CLOCK_DIV_50:inst3|CLOCK_1MHz'
+Slack : -1.000
+TNS   : -14.000
+
+Type  : Slow 1200mV 85C Model Minimum Pulse Width 'nave:inst17|gano'
+Slack : -1.000
+TNS   : -8.000
+
+Type  : Slow 1200mV 85C Model Minimum Pulse Width 'CLOCK_DIV_50:inst3|CLOCK_1Hz'
+Slack : -1.000
+TNS   : -5.000
+
+Type  : Slow 1200mV 85C Model Minimum Pulse Width 'CLOCK_DIV_50:inst3|clock_100Khz_int'
+Slack : -1.000
+TNS   : -4.000
+
+Type  : Slow 1200mV 85C Model Minimum Pulse Width 'CLOCK_DIV_50:inst3|clock_100hz_int'
+Slack : -1.000
+TNS   : -4.000
+
+Type  : Slow 1200mV 85C Model Minimum Pulse Width 'CLOCK_DIV_50:inst3|clock_10Khz_int'
+Slack : -1.000
+TNS   : -4.000
+
+Type  : Slow 1200mV 85C Model Minimum Pulse Width 'CLOCK_DIV_50:inst3|clock_10hz_int'
+Slack : -1.000
+TNS   : -4.000
+
+Type  : Slow 1200mV 85C Model Minimum Pulse Width 'CLOCK_DIV_50:inst3|clock_1Khz_int'
+Slack : -1.000
+TNS   : -4.000
+
+Type  : Slow 1200mV 85C Model Minimum Pulse Width 'CLOCK_DIV_50:inst3|clock_1Mhz_int'
+Slack : -1.000
+TNS   : -4.000
+
+Type  : Slow 1200mV 0C Model Setup 'demora:inst9|salida'
+Slack : -3.312
+TNS   : -162.826
+
+Type  : Slow 1200mV 0C Model Setup 'CLOCK_DIV_50:inst3|CLOCK_10Hz'
+Slack : -2.620
+TNS   : -35.747
+
+Type  : Slow 1200mV 0C Model Setup 'CLOCK_DIV_50:inst3|CLOCK_100KHz'
+Slack : -1.749
+TNS   : -26.994
+
+Type  : Slow 1200mV 0C Model Setup 'CLOCK_DIV_50:inst3|CLOCK_1MHz'
+Slack : -1.594
+TNS   : -9.858
+
+Type  : Slow 1200mV 0C Model Setup 'demora:inst1|salida'
+Slack : -1.585
+TNS   : -18.317
+
+Type  : Slow 1200mV 0C Model Setup 'CLOCK_DIV_50:inst3|clock_100Khz_int'
+Slack : -1.002
+TNS   : -1.002
+
+Type  : Slow 1200mV 0C Model Setup 'CLOCK_DIV_50:inst3|clock_1Mhz_int'
+Slack : -0.923
+TNS   : -0.923
+
+Type  : Slow 1200mV 0C Model Setup 'CLOCK_DIV_50:inst3|clock_100hz_int'
+Slack : -0.896
+TNS   : -0.908
+
+Type  : Slow 1200mV 0C Model Setup 'CLOCK_DIV_50:inst3|clock_1Khz_int'
+Slack : -0.862
+TNS   : -0.862
+
+Type  : Slow 1200mV 0C Model Setup 'CLOCK_DIV_50:inst3|clock_10Khz_int'
+Slack : -0.830
+TNS   : -0.846
+
+Type  : Slow 1200mV 0C Model Setup 'reloj50'
+Slack : -0.773
+TNS   : -6.935
+
+Type  : Slow 1200mV 0C Model Setup 'CLOCK_DIV_50:inst3|clock_10hz_int'
+Slack : -0.347
+TNS   : -0.347
+
+Type  : Slow 1200mV 0C Model Setup 'CLOCK_DIV_50:inst3|CLOCK_100Hz'
+Slack : -0.058
+TNS   : -0.096
+
+Type  : Slow 1200mV 0C Model Setup 'nave:inst17|gano'
+Slack : -0.011
+TNS   : -0.011
+
+Type  : Slow 1200mV 0C Model Setup 'CLOCK_DIV_50:inst3|CLOCK_1Hz'
+Slack : 0.036
+TNS   : 0.000
+
+Type  : Slow 1200mV 0C Model Hold 'demora:inst9|salida'
+Slack : 0.310
+TNS   : 0.000
+
+Type  : Slow 1200mV 0C Model Hold 'CLOCK_DIV_50:inst3|CLOCK_10Hz'
+Slack : 0.311
+TNS   : 0.000
+
+Type  : Slow 1200mV 0C Model Hold 'CLOCK_DIV_50:inst3|CLOCK_1Hz'
+Slack : 0.311
+TNS   : 0.000
+
+Type  : Slow 1200mV 0C Model Hold 'CLOCK_DIV_50:inst3|CLOCK_1MHz'
+Slack : 0.311
+TNS   : 0.000
+
+Type  : Slow 1200mV 0C Model Hold 'CLOCK_DIV_50:inst3|clock_100hz_int'
+Slack : 0.311
+TNS   : 0.000
+
+Type  : Slow 1200mV 0C Model Hold 'demora:inst1|salida'
+Slack : 0.311
+TNS   : 0.000
+
+Type  : Slow 1200mV 0C Model Hold 'CLOCK_DIV_50:inst3|clock_10Khz_int'
+Slack : 0.312
+TNS   : 0.000
+
+Type  : Slow 1200mV 0C Model Hold 'CLOCK_DIV_50:inst3|clock_1Khz_int'
+Slack : 0.312
+TNS   : 0.000
+
+Type  : Slow 1200mV 0C Model Hold 'CLOCK_DIV_50:inst3|clock_1Mhz_int'
+Slack : 0.312
+TNS   : 0.000
+
+Type  : Slow 1200mV 0C Model Hold 'nave:inst17|gano'
+Slack : 0.312
+TNS   : 0.000
+
+Type  : Slow 1200mV 0C Model Hold 'CLOCK_DIV_50:inst3|CLOCK_100KHz'
+Slack : 0.313
+TNS   : 0.000
+
+Type  : Slow 1200mV 0C Model Hold 'CLOCK_DIV_50:inst3|clock_100Khz_int'
+Slack : 0.313
+TNS   : 0.000
+
+Type  : Slow 1200mV 0C Model Hold 'CLOCK_DIV_50:inst3|clock_10hz_int'
+Slack : 0.313
+TNS   : 0.000
+
+Type  : Slow 1200mV 0C Model Hold 'reloj50'
+Slack : 0.342
+TNS   : 0.000
+
+Type  : Slow 1200mV 0C Model Hold 'CLOCK_DIV_50:inst3|CLOCK_100Hz'
+Slack : 0.343
+TNS   : 0.000
+
+Type  : Slow 1200mV 0C Model Recovery 'demora:inst9|salida'
+Slack : -0.682
+TNS   : -31.878
+
+Type  : Slow 1200mV 0C Model Recovery 'CLOCK_DIV_50:inst3|CLOCK_1MHz'
+Slack : -0.579
+TNS   : -6.755
+
+Type  : Slow 1200mV 0C Model Recovery 'CLOCK_DIV_50:inst3|CLOCK_1Hz'
+Slack : -0.471
+TNS   : -2.355
+
+Type  : Slow 1200mV 0C Model Recovery 'demora:inst1|salida'
+Slack : -0.282
+TNS   : -4.376
+
+Type  : Slow 1200mV 0C Model Recovery 'CLOCK_DIV_50:inst3|CLOCK_10Hz'
+Slack : -0.204
+TNS   : -1.212
+
+Type  : Slow 1200mV 0C Model Recovery 'CLOCK_DIV_50:inst3|CLOCK_100KHz'
+Slack : -0.101
+TNS   : -0.101
+
+Type  : Slow 1200mV 0C Model Recovery 'nave:inst17|gano'
+Slack : 0.163
+TNS   : 0.000
+
+Type  : Slow 1200mV 0C Model Removal 'CLOCK_DIV_50:inst3|CLOCK_100KHz'
+Slack : 0.329
+TNS   : 0.000
+
+Type  : Slow 1200mV 0C Model Removal 'nave:inst17|gano'
+Slack : 0.337
+TNS   : 0.000
+
+Type  : Slow 1200mV 0C Model Removal 'CLOCK_DIV_50:inst3|CLOCK_10Hz'
+Slack : 0.424
+TNS   : 0.000
+
+Type  : Slow 1200mV 0C Model Removal 'demora:inst9|salida'
+Slack : 0.595
+TNS   : 0.000
+
+Type  : Slow 1200mV 0C Model Removal 'demora:inst1|salida'
+Slack : 0.621
+TNS   : 0.000
+
+Type  : Slow 1200mV 0C Model Removal 'CLOCK_DIV_50:inst3|CLOCK_1MHz'
+Slack : 0.919
+TNS   : 0.000
+
+Type  : Slow 1200mV 0C Model Removal 'CLOCK_DIV_50:inst3|CLOCK_1Hz'
+Slack : 1.018
+TNS   : 0.000
+
+Type  : Slow 1200mV 0C Model Minimum Pulse Width 'reloj50'
+Slack : -3.000
+TNS   : -15.000
+
+Type  : Slow 1200mV 0C Model Minimum Pulse Width 'demora:inst9|salida'
+Slack : -1.000
+TNS   : -62.000
+
+Type  : Slow 1200mV 0C Model Minimum Pulse Width 'CLOCK_DIV_50:inst3|CLOCK_100KHz'
+Slack : -1.000
+TNS   : -33.000
+
+Type  : Slow 1200mV 0C Model Minimum Pulse Width 'CLOCK_DIV_50:inst3|CLOCK_100Hz'
+Slack : -1.000
+TNS   : -25.000
+
+Type  : Slow 1200mV 0C Model Minimum Pulse Width 'demora:inst1|salida'
+Slack : -1.000
+TNS   : -16.000
+
+Type  : Slow 1200mV 0C Model Minimum Pulse Width 'CLOCK_DIV_50:inst3|CLOCK_10Hz'
+Slack : -1.000
+TNS   : -14.000
+
+Type  : Slow 1200mV 0C Model Minimum Pulse Width 'CLOCK_DIV_50:inst3|CLOCK_1MHz'
+Slack : -1.000
+TNS   : -14.000
+
+Type  : Slow 1200mV 0C Model Minimum Pulse Width 'nave:inst17|gano'
+Slack : -1.000
+TNS   : -8.000
+
+Type  : Slow 1200mV 0C Model Minimum Pulse Width 'CLOCK_DIV_50:inst3|CLOCK_1Hz'
+Slack : -1.000
+TNS   : -5.000
+
+Type  : Slow 1200mV 0C Model Minimum Pulse Width 'CLOCK_DIV_50:inst3|clock_100Khz_int'
+Slack : -1.000
+TNS   : -4.000
+
+Type  : Slow 1200mV 0C Model Minimum Pulse Width 'CLOCK_DIV_50:inst3|clock_100hz_int'
+Slack : -1.000
+TNS   : -4.000
+
+Type  : Slow 1200mV 0C Model Minimum Pulse Width 'CLOCK_DIV_50:inst3|clock_10Khz_int'
+Slack : -1.000
+TNS   : -4.000
+
+Type  : Slow 1200mV 0C Model Minimum Pulse Width 'CLOCK_DIV_50:inst3|clock_10hz_int'
+Slack : -1.000
+TNS   : -4.000
+
+Type  : Slow 1200mV 0C Model Minimum Pulse Width 'CLOCK_DIV_50:inst3|clock_1Khz_int'
+Slack : -1.000
+TNS   : -4.000
+
+Type  : Slow 1200mV 0C Model Minimum Pulse Width 'CLOCK_DIV_50:inst3|clock_1Mhz_int'
+Slack : -1.000
+TNS   : -4.000
+
+Type  : Fast 1200mV 0C Model Setup 'demora:inst9|salida'
+Slack : -1.753
+TNS   : -79.920
+
+Type  : Fast 1200mV 0C Model Setup 'CLOCK_DIV_50:inst3|CLOCK_10Hz'
+Slack : -1.161
+TNS   : -15.825
+
+Type  : Fast 1200mV 0C Model Setup 'CLOCK_DIV_50:inst3|CLOCK_100KHz'
+Slack : -0.759
+TNS   : -6.448
+
+Type  : Fast 1200mV 0C Model Setup 'demora:inst1|salida'
+Slack : -0.667
+TNS   : -5.548
+
+Type  : Fast 1200mV 0C Model Setup 'CLOCK_DIV_50:inst3|clock_100Khz_int'
+Slack : -0.576
+TNS   : -0.576
+
+Type  : Fast 1200mV 0C Model Setup 'CLOCK_DIV_50:inst3|CLOCK_1MHz'
+Slack : -0.536
+TNS   : -2.074
+
+Type  : Fast 1200mV 0C Model Setup 'reloj50'
+Slack : -0.536
+TNS   : -1.963
+
+Type  : Fast 1200mV 0C Model Setup 'CLOCK_DIV_50:inst3|clock_1Khz_int'
+Slack : -0.442
+TNS   : -0.442
+
+Type  : Fast 1200mV 0C Model Setup 'CLOCK_DIV_50:inst3|clock_1Mhz_int'
+Slack : -0.352
+TNS   : -0.352
+
+Type  : Fast 1200mV 0C Model Setup 'CLOCK_DIV_50:inst3|clock_100hz_int'
+Slack : -0.304
+TNS   : -0.304
+
+Type  : Fast 1200mV 0C Model Setup 'CLOCK_DIV_50:inst3|clock_10Khz_int'
+Slack : -0.291
+TNS   : -0.291
+
+Type  : Fast 1200mV 0C Model Setup 'CLOCK_DIV_50:inst3|clock_10hz_int'
+Slack : 0.159
+TNS   : 0.000
+
+Type  : Fast 1200mV 0C Model Setup 'CLOCK_DIV_50:inst3|CLOCK_100Hz'
+Slack : 0.329
+TNS   : 0.000
+
+Type  : Fast 1200mV 0C Model Setup 'nave:inst17|gano'
+Slack : 0.358
+TNS   : 0.000
+
+Type  : Fast 1200mV 0C Model Setup 'CLOCK_DIV_50:inst3|CLOCK_1Hz'
+Slack : 0.391
+TNS   : 0.000
+
+Type  : Fast 1200mV 0C Model Hold 'CLOCK_DIV_50:inst3|CLOCK_1MHz'
+Slack : 0.173
+TNS   : 0.000
+
+Type  : Fast 1200mV 0C Model Hold 'CLOCK_DIV_50:inst3|CLOCK_10Hz'
+Slack : 0.186
+TNS   : 0.000
+
+Type  : Fast 1200mV 0C Model Hold 'demora:inst1|salida'
+Slack : 0.186
+TNS   : 0.000
+
+Type  : Fast 1200mV 0C Model Hold 'demora:inst9|salida'
+Slack : 0.186
+TNS   : 0.000
+
+Type  : Fast 1200mV 0C Model Hold 'nave:inst17|gano'
+Slack : 0.186
+TNS   : 0.000
+
+Type  : Fast 1200mV 0C Model Hold 'CLOCK_DIV_50:inst3|CLOCK_100KHz'
+Slack : 0.187
+TNS   : 0.000
+
+Type  : Fast 1200mV 0C Model Hold 'CLOCK_DIV_50:inst3|CLOCK_1Hz'
+Slack : 0.187
+TNS   : 0.000
+
+Type  : Fast 1200mV 0C Model Hold 'CLOCK_DIV_50:inst3|clock_100Khz_int'
+Slack : 0.187
+TNS   : 0.000
+
+Type  : Fast 1200mV 0C Model Hold 'CLOCK_DIV_50:inst3|clock_100hz_int'
+Slack : 0.187
+TNS   : 0.000
+
+Type  : Fast 1200mV 0C Model Hold 'CLOCK_DIV_50:inst3|clock_10Khz_int'
+Slack : 0.187
+TNS   : 0.000
+
+Type  : Fast 1200mV 0C Model Hold 'CLOCK_DIV_50:inst3|clock_10hz_int'
+Slack : 0.187
+TNS   : 0.000
+
+Type  : Fast 1200mV 0C Model Hold 'CLOCK_DIV_50:inst3|clock_1Khz_int'
+Slack : 0.187
+TNS   : 0.000
+
+Type  : Fast 1200mV 0C Model Hold 'CLOCK_DIV_50:inst3|clock_1Mhz_int'
+Slack : 0.188
+TNS   : 0.000
+
+Type  : Fast 1200mV 0C Model Hold 'CLOCK_DIV_50:inst3|CLOCK_100Hz'
+Slack : 0.196
+TNS   : 0.000
+
+Type  : Fast 1200mV 0C Model Hold 'reloj50'
+Slack : 0.201
+TNS   : 0.000
+
+Type  : Fast 1200mV 0C Model Recovery 'demora:inst9|salida'
+Slack : -0.166
+TNS   : -4.471
+
+Type  : Fast 1200mV 0C Model Recovery 'CLOCK_DIV_50:inst3|CLOCK_1MHz'
+Slack : -0.024
+TNS   : -0.168
+
+Type  : Fast 1200mV 0C Model Recovery 'CLOCK_DIV_50:inst3|CLOCK_1Hz'
+Slack : 0.061
+TNS   : 0.000
+
+Type  : Fast 1200mV 0C Model Recovery 'demora:inst1|salida'
+Slack : 0.080
+TNS   : 0.000
+
+Type  : Fast 1200mV 0C Model Recovery 'CLOCK_DIV_50:inst3|CLOCK_10Hz'
+Slack : 0.145
+TNS   : 0.000
+
+Type  : Fast 1200mV 0C Model Recovery 'CLOCK_DIV_50:inst3|CLOCK_100KHz'
+Slack : 0.186
+TNS   : 0.000
+
+Type  : Fast 1200mV 0C Model Recovery 'nave:inst17|gano'
+Slack : 0.447
+TNS   : 0.000
+
+Type  : Fast 1200mV 0C Model Removal 'nave:inst17|gano'
+Slack : 0.169
+TNS   : 0.000
+
+Type  : Fast 1200mV 0C Model Removal 'CLOCK_DIV_50:inst3|CLOCK_100KHz'
+Slack : 0.180
+TNS   : 0.000
+
+Type  : Fast 1200mV 0C Model Removal 'CLOCK_DIV_50:inst3|CLOCK_10Hz'
+Slack : 0.221
+TNS   : 0.000
+
+Type  : Fast 1200mV 0C Model Removal 'demora:inst9|salida'
+Slack : 0.373
+TNS   : 0.000
+
+Type  : Fast 1200mV 0C Model Removal 'demora:inst1|salida'
+Slack : 0.375
+TNS   : 0.000
+
+Type  : Fast 1200mV 0C Model Removal 'CLOCK_DIV_50:inst3|CLOCK_1MHz'
+Slack : 0.544
+TNS   : 0.000
+
+Type  : Fast 1200mV 0C Model Removal 'CLOCK_DIV_50:inst3|CLOCK_1Hz'
+Slack : 0.585
+TNS   : 0.000
+
+Type  : Fast 1200mV 0C Model Minimum Pulse Width 'reloj50'
+Slack : -3.000
+TNS   : -15.650
+
+Type  : Fast 1200mV 0C Model Minimum Pulse Width 'demora:inst9|salida'
+Slack : -1.000
+TNS   : -62.000
+
+Type  : Fast 1200mV 0C Model Minimum Pulse Width 'CLOCK_DIV_50:inst3|CLOCK_100KHz'
+Slack : -1.000
+TNS   : -33.000
+
+Type  : Fast 1200mV 0C Model Minimum Pulse Width 'CLOCK_DIV_50:inst3|CLOCK_100Hz'
+Slack : -1.000
+TNS   : -25.000
+
+Type  : Fast 1200mV 0C Model Minimum Pulse Width 'demora:inst1|salida'
+Slack : -1.000
+TNS   : -16.000
+
+Type  : Fast 1200mV 0C Model Minimum Pulse Width 'CLOCK_DIV_50:inst3|CLOCK_10Hz'
+Slack : -1.000
+TNS   : -14.000
+
+Type  : Fast 1200mV 0C Model Minimum Pulse Width 'CLOCK_DIV_50:inst3|CLOCK_1MHz'
+Slack : -1.000
+TNS   : -14.000
+
+Type  : Fast 1200mV 0C Model Minimum Pulse Width 'nave:inst17|gano'
+Slack : -1.000
+TNS   : -8.000
+
+Type  : Fast 1200mV 0C Model Minimum Pulse Width 'CLOCK_DIV_50:inst3|CLOCK_1Hz'
+Slack : -1.000
+TNS   : -5.000
+
+Type  : Fast 1200mV 0C Model Minimum Pulse Width 'CLOCK_DIV_50:inst3|clock_100Khz_int'
+Slack : -1.000
+TNS   : -4.000
+
+Type  : Fast 1200mV 0C Model Minimum Pulse Width 'CLOCK_DIV_50:inst3|clock_100hz_int'
+Slack : -1.000
+TNS   : -4.000
+
+Type  : Fast 1200mV 0C Model Minimum Pulse Width 'CLOCK_DIV_50:inst3|clock_10Khz_int'
+Slack : -1.000
+TNS   : -4.000
+
+Type  : Fast 1200mV 0C Model Minimum Pulse Width 'CLOCK_DIV_50:inst3|clock_10hz_int'
+Slack : -1.000
+TNS   : -4.000
+
+Type  : Fast 1200mV 0C Model Minimum Pulse Width 'CLOCK_DIV_50:inst3|clock_1Khz_int'
+Slack : -1.000
+TNS   : -4.000
+
+Type  : Fast 1200mV 0C Model Minimum Pulse Width 'CLOCK_DIV_50:inst3|clock_1Mhz_int'
+Slack : -1.000
+TNS   : -4.000
+
+------------------------------------------------------------

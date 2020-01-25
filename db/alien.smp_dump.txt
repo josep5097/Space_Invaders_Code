@@ -1,0 +1,10 @@
+
+State Machine - |alien|MSS:inst13|y
+Name y.tg y.tf y.te y.td y.tc y.tb y.ta 
+y.ta 0 0 0 0 0 0 0 
+y.tb 0 0 0 0 0 1 1 
+y.tc 0 0 0 0 1 0 1 
+y.td 0 0 0 1 0 0 1 
+y.te 0 0 1 0 0 0 1 
+y.tf 0 1 0 0 0 0 1 
+y.tg 1 0 0 0 0 0 1 

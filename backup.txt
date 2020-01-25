@@ -1,0 +1,381 @@
+library ieee;
+use ieee.std_logic_1164.all;
+use ieee.std_logic_unsigned.all;
+USE ieee.numeric_std.ALL;
+
+entity nave is
+	port(	F8,F7,F6,F5,F4,F3,F2,F1, movbala, posdisparo, coldisparo: buffer std_logic_vector(7 downto 0);
+	izq, der, disparo, clock1, clock2, enable, reset,mantenerdisparo : in std_logic;
+	gano, perdio, pararbala: out std_logic);
+end nave;
+architecture sol of nave is
+signal nivel8, nivel7, nivel6, nivel5, nivel4, nivel3, nivel2, nivel1, columna: std_logic_vector(7 downto 0);
+signal topeizq, topeder, movizq, movder: std_logic;
+begin
+	PROCESS(clock1,reset)
+			variable I :
+			integer range 1 to 9;
+
+		BEGIN
+			if reset='0' then--- ponemos el mapa deseado y hacemos cero al resto de las variables
+				nivel8<="00001110";
+				nivel7<="00001110";
+				nivel6<="00000100";
+				nivel5<="00000000";
+				nivel4<="00000000";
+				nivel3<="00000000";
+				nivel2<="00000000";
+				
+				F8<="00001110";
+				F7<="00001110";
+				F6<="00000100";
+				F5<="00000000";
+				F4<="00000000";
+				F3<="00000000";
+				F2<="00000000";
+				
+				movbala<="00000010";-- para ir subiendo la bala
+				pararbala <= '1';-- para que la bala siga activa
+				
+				I := 2; 
+				perdio <='0';
+				gano <= '0';
+				topeizq<='0'; topeder<='0';
+				movizq<='1'; movder<='0';
+				
+			elsif (clock1'event and clock1='1') then
+				
+				if (enable='1') then 
+					
+					if (F2(7) or F2(6) or F2(5) or F2(4) or F2(3) or F2(2) or F2(1) or F2(0)) = '1' then-- si llego al ultimo nivel perdio
+						perdio <='1';
+					elsif (nivel2="00000000") and (nivel3="00000000") and (nivel4="00000000") and (nivel5="00000000") and (nivel6="00000000") and (nivel7="00000000") and (nivel8="00000000") then
+						gano<='1';end if;--si esta vacio el mapa gano
+					
+					if (movizq ='1') and (topeizq ='0') then --mover hacia la izquierda siempre y cuando no llegue al limite
+						F8<= nivel8(6) & nivel8(5) & nivel8(4) & nivel8(3) & nivel8(2) & nivel8(1) & nivel8(0) & '0';
+						F7<= nivel7(6) & nivel7(5) & nivel7(4) & nivel7(3) & nivel7(2) & nivel7(1) & nivel7(0) & '0';
+						F6<= nivel6(6) & nivel6(5) & nivel6(4) & nivel6(3) & nivel6(2) & nivel6(1) & nivel6(0) & '0';
+						F5<= nivel5(6) & nivel5(5) & nivel5(4) & nivel5(3) & nivel5(2) & nivel5(1) & nivel5(0) & '0';
+						F4<= nivel4(6) & nivel4(5) & nivel4(4) & nivel4(3) & nivel4(2) & nivel4(1) & nivel4(0) & '0';
+						F3<= nivel3(6) & nivel3(5) & nivel3(4) & nivel3(3) & nivel3(2) & nivel3(1) & nivel3(0) & '0';
+						F2<= nivel2(6) & nivel2(5) & nivel2(4) & nivel2(3) & nivel2(2) & nivel2(1) & nivel2(0) & '0';
+						topeder<='0';
+						nivel8<= nivel8(6) & nivel8(5) & nivel8(4) & nivel8(3) & nivel8(2) & nivel8(1) & nivel8(0) & '0';
+						nivel7<= nivel7(6) & nivel7(5) & nivel7(4) & nivel7(3) & nivel7(2) & nivel7(1) & nivel7(0) & '0';
+						nivel6<= nivel6(6) & nivel6(5) & nivel6(4) & nivel6(3) & nivel6(2) & nivel6(1) & nivel6(0) & '0';
+						nivel5<= nivel5(6) & nivel5(5) & nivel5(4) & nivel5(3) & nivel5(2) & nivel5(1) & nivel5(0) & '0';
+						nivel4<= nivel4(6) & nivel4(5) & nivel4(4) & nivel4(3) & nivel4(2) & nivel4(1) & nivel4(0) & '0';
+						nivel3<= nivel3(6) & nivel3(5) & nivel3(4) & nivel3(3) & nivel3(2) & nivel3(1) & nivel3(0) & '0';
+						nivel2<= nivel2(6) & nivel2(5) & nivel2(4) & nivel2(3) & nivel2(2) & nivel2(1) & nivel2(0) & '0';
+						
+						topeizq<= nivel8(6) or nivel7(6) or nivel6(6) or nivel5(6) or nivel4(6) or nivel3(6) or nivel2(6);
+						topeder<= nivel8(1) or nivel7(1) or nivel6(1) or nivel5(1) or nivel4(1) or nivel3(1) or nivel2(1);
+
+					elsif (movder ='1') and (topeder ='0')  then--mover hacia la derecha siempre y cuando no llegue al limite
+						F8<= '0' & nivel8(7) & nivel8(6) & nivel8(5) & nivel8(4) & nivel8(3) & nivel8(2) & nivel8(1);
+						F7<= '0' & nivel7(7) & nivel7(6) & nivel7(5) & nivel7(4) & nivel7(3) & nivel7(2) & nivel7(1);
+						F6<= '0' & nivel6(7) & nivel6(6) & nivel6(5) & nivel6(4) & nivel6(3) & nivel6(2) & nivel6(1);
+						F5<= '0' & nivel5(7) & nivel5(6) & nivel5(5) & nivel5(4) & nivel5(3) & nivel5(2) & nivel5(1);
+						F4<= '0' & nivel4(7) & nivel4(6) & nivel4(5) & nivel4(4) & nivel4(3) & nivel4(2) & nivel4(1);
+						F3<= '0' & nivel3(7) & nivel3(6) & nivel3(5) & nivel3(4) & nivel3(3) & nivel3(2) & nivel3(1);
+						F2<= '0' & nivel2(7) & nivel2(6) & nivel2(5) & nivel2(4) & nivel2(3) & nivel2(2) & nivel2(1);
+						topeizq<='0';
+						nivel8<= '0' & nivel8(7) & nivel8(6) & nivel8(5) & nivel8(4) & nivel8(3) & nivel8(2) & nivel8(1);
+						nivel7<= '0' & nivel7(7) & nivel7(6) & nivel7(5) & nivel7(4) & nivel7(3) & nivel7(2) & nivel7(1);
+						nivel6<= '0' & nivel6(7) & nivel6(6) & nivel6(5) & nivel6(4) & nivel6(3) & nivel6(2) & nivel6(1);
+						nivel5<= '0' & nivel5(7) & nivel5(6) & nivel5(5) & nivel5(4) & nivel5(3) & nivel5(2) & nivel5(1);
+						nivel4<= '0' & nivel4(7) & nivel4(6) & nivel4(5) & nivel4(4) & nivel4(3) & nivel4(2) & nivel4(1);
+						nivel3<= '0' & nivel3(7) & nivel3(6) & nivel3(5) & nivel3(4) & nivel3(3) & nivel3(2) & nivel3(1);
+						nivel2<= '0' & nivel2(7) & nivel2(6) & nivel2(5) & nivel2(4) & nivel2(3) & nivel2(2) & nivel2(1);
+						
+						
+						topeizq<= nivel8(6) or nivel7(6) or nivel6(6) or nivel5(6) or nivel4(6) or nivel3(6) or nivel2(6);
+						topeder<= nivel8(1) or nivel7(1) or nivel6(1) or nivel5(1) or nivel4(1) or nivel3(1) or nivel2(1);
+					elsif (topeizq = '1') then
+						F2<= nivel3;--salto de una linea de la nave
+						F3<= nivel4; 
+						F4<= nivel5; 
+						F5<= nivel6; 
+						F6<= nivel7; 
+						F7<= nivel8;  
+						F8<= "00000000";
+						movizq<='0';
+						movder<='1';
+						nivel2<= nivel3;
+						nivel3<= nivel4; 
+						nivel4<= nivel5; 
+						nivel5<= nivel6; 
+						nivel6<= nivel7; 
+						nivel7<= nivel8;  
+						nivel8<= "00000000";
+						
+					elsif (topeder = '1') then
+						F2<= nivel3;--salto de una linea de la nave
+						F3<= nivel4; 
+						F4<= nivel5; 
+						F5<= nivel6; 
+						F6<= nivel7; 
+						F7<= nivel8;  
+						F8<= "00000000";
+						movizq<='1';
+						movder<='0';
+						nivel2<= nivel3;
+						nivel3<= nivel4; 
+						nivel4<= nivel5; 
+						nivel5<= nivel6; 
+						nivel6<= nivel7; 
+						nivel7<= nivel8;  
+						nivel8<= "00000000";
+						
+					end if;
+					
+					if (mantenerdisparo = '1') then--DISPARO
+							if disparo = '1' then
+								movbala<="00000010";
+								coldisparo <= posdisparo;
+								pararbala <= '0';
+								I := to_integer(signed(coldisparo))-1;
+							end if;
+							
+							if (nivel2(to_integer(signed(coldisparo))-1) = '0') and (movbala = 2) then-- verificar si el punto es un uno para borrarlo o cero para que el disparo suba.
+								nivel2(to_integer(signed(coldisparo))-1) <= '1';
+								movbala <= movbala + 1;
+								pararbala <= '0';
+							elsif (nivel2(to_integer(signed(coldisparo))-1) = '1') and (movbala = 2) then
+								nivel2(to_integer(signed(coldisparo))-1) <= '0';
+								movbala <=  "00001001";
+								pararbala <= '1';
+							
+							
+							
+							elsif (nivel3(to_integer(signed(coldisparo))-1) = '0') and (movbala = 3) then-- verificar si el punto es un uno para borrarlo o cero para que el disparo suba.
+								nivel3(to_integer(signed(coldisparo))-1) <= '1';
+								movbala <= movbala + 1;
+								pararbala <= '0';
+								if movder = '1' then 
+									nivel2(to_integer(signed(coldisparo))-2) <= '0';--se borra la posicion anterior de la bala
+								elsif movizq = '1' then
+									nivel2(to_integer(signed(coldisparo))) <= '0';end if;--se borra la posicion anterior de la bala								
+							elsif (nivel3(to_integer(signed(coldisparo))-1) = '1') and (movbala = 3) then
+								nivel3(to_integer(signed(coldisparo))-1) <= '0';
+								movbala <=  "00001001";
+								pararbala <= '1';
+								if movder = '1' then 
+									nivel2(to_integer(signed(coldisparo))-2) <= '0';--se borra la posicion anterior de la bala
+								elsif movizq = '1' then
+									nivel2(to_integer(signed(coldisparo))) <= '0';end if;--se borra la posicion anterior de la bala		
+							
+							
+							
+							elsif (nivel4(to_integer(signed(coldisparo))-1) = '0') and (movbala = 4) then-- verificar si el punto es un uno para borrarlo o cero para que el disparo suba.
+								nivel4(to_integer(signed(coldisparo))-1) <= '1';
+								movbala <= movbala + 1;
+								pararbala <= '0';
+								if movder = '1' then 
+									nivel3(to_integer(signed(coldisparo))-2) <= '0';--se borra la posicion anterior de la bala
+								elsif movizq = '1' then
+									nivel3(to_integer(signed(coldisparo))) <= '0';end if;--se borra la posicion anterior de la bala	
+							elsif (nivel4(to_integer(signed(posdisparo))-1) = '1') and (movbala = 4) then
+								nivel4(to_integer(signed(posdisparo))-1) <= '0';
+								movbala <=  "00001001";
+								pararbala <= '1';
+								if movder = '1' then 
+									nivel3(to_integer(signed(coldisparo))-2) <= '0';--se borra la posicion anterior de la bala
+								elsif movizq = '1' then
+									nivel3(to_integer(signed(coldisparo))) <= '0';end if;--se borra la posicion anterior de la bala	
+								
+							
+							
+							elsif (nivel5(to_integer(signed(coldisparo))-1) = '0') and (movbala = 5) then-- verificar si el punto es un uno para borrarlo o cero para que el disparo suba.
+								nivel5(to_integer(signed(coldisparo))-1) <= '1';
+								movbala <= movbala + 1;
+								pararbala <= '0';
+								if movder = '1' then 
+									nivel4(to_integer(signed(coldisparo))-2) <= '0';--se borra la posicion anterior de la bala
+								elsif movizq = '1' then
+									nivel4(to_integer(signed(coldisparo))) <= '0';end if;--se borra la posicion anterior de la bala	
+							elsif (nivel5(to_integer(signed(coldisparo))-1) = '1') and (movbala = 5) then
+								nivel5(to_integer(signed(coldisparo))-1) <= '0';
+								movbala <=  "00001001";
+								pararbala <= '1';
+								if movder = '1' then 
+									nivel4(to_integer(signed(coldisparo))-2) <= '0';--se borra la posicion anterior de la bala
+								elsif movizq = '1' then
+									nivel4(to_integer(signed(coldisparo))) <= '0';end if;--se borra la posicion anterior de la bala	
+							
+							
+							
+							elsif (nivel6(to_integer(signed(coldisparo))-1) = '0') and (movbala = 6) then-- verificar si el punto es un uno para borrarlo o cero para que el disparo suba.
+								nivel6(to_integer(signed(coldisparo))-1) <= '1';
+								movbala <= movbala + 1;
+								pararbala <= '0';
+								if movder = '1' then 
+									nivel5(to_integer(signed(coldisparo))-2) <= '0';--se borra la posicion anterior de la bala
+								elsif movizq = '1' then
+									nivel5(to_integer(signed(coldisparo))) <= '0';end if;--se borra la posicion anterior de la bala	
+							elsif (nivel6(to_integer(signed(coldisparo))-1) = '1') and (movbala = 6) then
+								nivel6(to_integer(signed(coldisparo))-1) <= '0';
+								movbala <=  "00001001";
+								pararbala <= '1';
+								if movder = '1' then 
+									nivel5(to_integer(signed(coldisparo))-2) <= '0';--se borra la posicion anterior de la bala
+								elsif movizq = '1' then
+									nivel5(to_integer(signed(coldisparo))) <= '0';end if;--se borra la posicion anterior de la bala	
+							
+							
+							
+							elsif (nivel7(to_integer(signed(coldisparo))-1) = '0') and (movbala = 7) then-- verificar si el punto es un uno para borrarlo o cero para que el disparo suba.
+								nivel7(to_integer(signed(coldisparo))-1) <= '1';
+								movbala <= movbala + 1;
+								pararbala <= '0';
+								if movder = '1' then 
+									nivel6(to_integer(signed(coldisparo))-2) <= '0';--se borra la posicion anterior de la bala
+								elsif movizq = '1' then
+									nivel6(to_integer(signed(coldisparo))) <= '0';end if;--se borra la posicion anterior de la bala	
+							elsif (nivel7(to_integer(signed(coldisparo))-1) = '1') and (movbala = 7) then
+								nivel7(to_integer(signed(coldisparo))-1) <= '0';
+								movbala <=  "00001001";
+								pararbala <= '1';
+								if movder = '1' then 
+									nivel6(to_integer(signed(coldisparo))-2) <= '0';--se borra la posicion anterior de la bala
+								elsif movizq = '1' then
+									nivel6(to_integer(signed(coldisparo))) <= '0';end if;--se borra la posicion anterior de la bala	
+							
+							
+							
+							elsif (nivel8(to_integer(signed(coldisparo))-1) = '0') and (movbala = 8) then-- verificar si el punto es un uno para borrarlo o cero para que el disparo suba.
+								nivel8(to_integer(signed(coldisparo))-1) <= '1';
+								movbala <= movbala + 1;
+								pararbala <= '0';
+								if movder = '1' then 
+									nivel7(to_integer(signed(coldisparo))-2) <= '0';--se borra la posicion anterior de la bala
+								elsif movizq = '1' then
+									nivel7(to_integer(signed(coldisparo))) <= '0';end if;--se borra la posicion anterior de la bala	
+							elsif (nivel8(to_integer(signed(coldisparo))-1) = '1') and (movbala = 8) then
+								nivel8(to_integer(signed(coldisparo))-1) <= '0';
+								movbala <=  "00001001";
+								pararbala <= '1';
+								if movder = '1' then 
+									nivel7(to_integer(signed(coldisparo))-2) <= '0';--se borra la posicion anterior de la bala
+								elsif movizq = '1' then
+									nivel7(to_integer(signed(coldisparo))) <= '0';end if;--se borra la posicion anterior de la bala	
+							
+							
+							end if;
+						end if;
+					
+				end if;
+			end if;
+		end process;
+		
+		----------------------------------------------
+		
+		PROCESS(clock2, RESET)-- movimiento del jugador, el reloj sera el pulso de izquierda o derecha que se hara externamente con una compuerta or
+			
+			BEGIN
+				if reset='0' then
+				F1<="00100000";
+				posdisparo <= "00000110";
+				
+				
+				elsif (clock2'event and clock2='1') then
+				 if (izq='1') and (F1(7)='0') then --moverse cuando se apreta la izquierda
+					F1<= F1(6) & F1(5) & F1(4) & F1(3) & F1(2) & F1(1) & F1(0) & F1(7);
+					posdisparo <= posdisparo + 1;
+				elsif (der='1') and (F1(0)='0') then-- moverse cuando se apreta la derecha
+					F1<= F1(0) & F1(7) & F1(6) & F1(5) & F1(4) & F1(3) & F1(2) & F1(1);
+					posdisparo <= posdisparo - 1;
+				end if;
+
+				end if;
+		end process;
+		
+		----------------------------------------------
+		--disparo
+--		PROCESS 
+--			variable I :
+--			integer range 1 to 9;
+--			BEGIN
+				--if reset='0' then
+					--I := 2;-- posicion inicial de la bala
+				--if (CLOCK1_1'event and CLOCK1_1='1') then
+--				WAIT UNTIL CLOCK1_1'EVENT and CLOCK1_1 = '1';	
+--					if (mantenerdisparo = '1') then
+--							if disparo = '1' then
+--								I := 2;
+--							else I := 9; end if;
+	--						
+		--					if (nivel2(to_integer(signed(posdisparo))-1) = '0') and (I = 2) then-- verificar si el punto es un uno para borrarlo o cero para que el disparo suba.
+			--					nivel2(to_integer(signed(posdisparo))-1) <= '1';
+				--				I := I + 1;
+					--			pararbala <= '0';
+--						--	elsif (nivel2(to_integer(signed(posdisparo))-1) = '1') and (I = 2) then
+	--							nivel2(to_integer(signed(posdisparo))-1) <= '0';
+		--						I := 9;
+			--					pararbala <= '1';---
+				--			
+					--		elsif (nivel3(to_integer(signed(posdisparo))-1) = '0') and (I = 3) then-- verificar si el punto es un uno para borrarlo o cero para que el disparo suba.
+						--		nivel3(to_integer(signed(posdisparo))-1) <= '1';
+							--	I := I + 1;
+--								pararbala <= '0';
+	--						elsif (nivel3(to_integer(signed(posdisparo))-1) = '1') and (I = 3) then
+		--						nivel3(to_integer(signed(posdisparo))-1) <= '0';
+			--					I := 9;
+				----				pararbala <= '1';
+					--		
+						--	elsif (nivel4(to_integer(signed(posdisparo))-1) = '0') and (I = 4) then-- verificar si el punto es un uno para borrarlo o cero para que el disparo suba.
+--								nivel4(to_integer(signed(posdisparo))-1) <= '1';
+	--							I := I + 1;
+		--						pararbala <= '0';
+			--				elsif (nivel4(to_integer(signed(posdisparo))-1) = '1') and (I = 4) then
+				--				nivel4(to_integer(signed(posdisparo))-1) <= '0';
+					--			I := 9;
+						--		pararbala <= '1';
+--							
+	--						
+	--						elsif (nivel5(to_integer(signed(posdisparo))-1) = '0') and (I = 5) then-- verificar si el punto es un uno para borrarlo o cero para que el disparo suba.
+	--							nivel5(to_integer(signed(posdisparo))-1) <= '1';
+	--							I := I + 1;
+	--							pararbala <= '0';
+	--						elsif (nivel5(to_integer(signed(posdisparo))-1) = '1') and (I = 5) then
+	--							nivel5(to_integer(signed(posdisparo))-1) <= '0';
+	--							I := 9;
+	--							pararbala <= '1';
+	--						
+	--						elsif (nivel6(to_integer(signed(posdisparo))-1) = '0') and (I = 6) then-- verificar si el punto es un uno para borrarlo o cero para que el disparo suba.
+	--							nivel6(to_integer(signed(posdisparo))-1) <= '1';
+	----							I := I + 1;
+	--							pararbala <= '0';
+	--						elsif (nivel6(to_integer(signed(posdisparo))-1) = '1') and (I = 6) then
+	--							nivel6(to_integer(signed(posdisparo))-1) <= '0';
+	--							I := 9;
+	--							pararbala <= '1';
+	--						
+	--						elsif (nivel7(to_integer(signed(posdisparo))-1) = '0') and (I = 7) then-- verificar si el punto es un uno para borrarlo o cero para que el disparo suba.
+	--							nivel7(to_integer(signed(posdisparo))-1) <= '1';
+	--							I := I + 1;
+	--							pararbala <= '0';
+	----						elsif (nivel7(to_integer(signed(posdisparo))-1) = '1') and (I = 7) then
+	--							nivel7(to_integer(signed(posdisparo))-1) <= '0';
+	--							I := 9;
+	--							pararbala <= '1';
+	--						
+	--						elsif (nivel8(to_integer(signed(posdisparo))-1) = '0') and (I = 8) then-- verificar si el punto es un uno para borrarlo o cero para que el disparo suba.
+		--						nivel8(to_integer(signed(posdisparo))-1) <= '1';
+			--					I := I + 1;
+				--				pararbala <= '0';
+					--		elsif (nivel8(to_integer(signed(posdisparo))-1) = '1') and (I = 8) then
+						--		nivel8(to_integer(signed(posdisparo))-1) <= '0';
+--								I := 9;
+	--							pararbala <= '1';
+		--					end if;
+			--			end if;
+		
+								--						coldisparo<= coldisparo(7) & coldisparo(6) & coldisparo(5) & coldisparo(4) & coldisparo(3) & coldisparo(2) & '0';
+	--		end process;
+				
+end sol;
+						
+						
+				  

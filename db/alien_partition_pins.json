@@ -1,0 +1,105 @@
+{
+	"partitions" : [
+		{
+			"name" : "Top",
+			"pins" : [
+				{
+					"name" : "win",
+					"strict" : false
+				},
+				{
+					"name" : "lost",
+					"strict" : false
+				},
+				{
+					"name" : "col[7]",
+					"strict" : false
+				},
+				{
+					"name" : "col[6]",
+					"strict" : false
+				},
+				{
+					"name" : "col[5]",
+					"strict" : false
+				},
+				{
+					"name" : "col[4]",
+					"strict" : false
+				},
+				{
+					"name" : "col[3]",
+					"strict" : false
+				},
+				{
+					"name" : "col[2]",
+					"strict" : false
+				},
+				{
+					"name" : "col[1]",
+					"strict" : false
+				},
+				{
+					"name" : "col[0]",
+					"strict" : false
+				},
+				{
+					"name" : "fila[7]",
+					"strict" : false
+				},
+				{
+					"name" : "fila[6]",
+					"strict" : false
+				},
+				{
+					"name" : "fila[5]",
+					"strict" : false
+				},
+				{
+					"name" : "fila[4]",
+					"strict" : false
+				},
+				{
+					"name" : "fila[3]",
+					"strict" : false
+				},
+				{
+					"name" : "fila[2]",
+					"strict" : false
+				},
+				{
+					"name" : "fila[1]",
+					"strict" : false
+				},
+				{
+					"name" : "fila[0]",
+					"strict" : false
+				},
+				{
+					"name" : "reloj50",
+					"strict" : false
+				},
+				{
+					"name" : "reset_boton",
+					"strict" : false
+				},
+				{
+					"name" : "dispar_boton",
+					"strict" : false
+				},
+				{
+					"name" : "star_boton",
+					"strict" : false
+				},
+				{
+					"name" : "derecha",
+					"strict" : false
+				},
+				{
+					"name" : "IZQUI",
+					"strict" : false
+				}
+			]
+		}
+	]
+}

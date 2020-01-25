@@ -1,0 +1,14 @@
+Analysis & Synthesis Status : Successful - Fri Jan 24 14:37:06 2020
+Quartus Prime Version : 18.0.0 Build 614 04/24/2018 SJ Lite Edition
+Revision Name : alien
+Top-level Entity Name : alien
+Family : Cyclone IV E
+Total logic elements : 474
+    Total combinational functions : 453
+    Dedicated logic registers : 213
+Total registers : 213
+Total pins : 24
+Total virtual pins : 0
+Total memory bits : 0
+Embedded Multiplier 9-bit elements : 0
+Total PLLs : 0
